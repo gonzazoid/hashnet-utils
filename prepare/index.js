@@ -2,7 +2,6 @@ import path from 'node:path';
 import url from 'node:url';
 
 import fs from 'fs-extra';
-import { parse as parseCSS } from '@adobe/css-tools';
 import { glob } from 'glob';
 
 import {
