@@ -1,6 +1,6 @@
 {
-  "name": "hash-net-prepare",
-  "version": "1.0.0",
+  "name": "hashnet-utils",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "bin": {
