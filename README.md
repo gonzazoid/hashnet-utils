@@ -32,7 +32,7 @@ for example: ``secp256k1.sha256:b3dd3803e2c02c11f5ce26ef284cc7a092ce688943007848
 
 #### #Net agent's url template
 
-depends on realisation and agent's ip/domain. For example:
+depends on implementation and agent's ip/domain. For example:
 
 ```
 http://172.86.96.172/{{request}}/{{function}}/{{path}} 

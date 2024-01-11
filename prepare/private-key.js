@@ -1,9 +1,9 @@
-import * as secp256k1 from '@noble/secp256k1';
-import secp256r1 from 'secp256r1';
+import * as secp256k1 from "@noble/secp256k1";
+import secp256r1 from "secp256r1";
 
 import {
   createHash,
-} from 'node:crypto';
+} from "node:crypto";
 
 import isHexadecimal from "./utils/is-hexadecimal.js";
 
@@ -32,7 +32,7 @@ class PrivateKey {
   }
 
   getPublicKey() {
-    const buff = Buffer.from(this.keyValue, 'hex');
+    const buff = Buffer.from(this.keyValue, "hex");
     let publicKeyValue;
     if (this.signFunction === "secp256k1") {
       const uint8 = new Uint8Array(buff);
@@ -53,7 +53,6 @@ class PrivateKey {
   }
 
   isDoableSignedUrl(url) {
-    console.log("IS DOABLE???", url.toString());
     const chunks = url.pathname.split("/");
     if (chunks.length < 3) return false;
     if (chunks[0] !== "") return false;
@@ -81,7 +80,7 @@ class PrivateKey {
     } catch {}
     return false;
   }
-
+  // TODO use asn1.js
   _makeDer(signature) {
     // https://bitcoin.stackexchange.com/questions/92680/what-are-the-der-signature-and-sec-format
     const __rHex = signature.r.toString(16);
